@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------
+Examples of how to use the Admin SDK Users API commands:
+--------------------------------------------------------------------------------
+
+The following is the workflow for using each of the usertool subcommands:
+
+PREWORK: (see the INSTALL instructions)
+
+Your initial command will verify you are authorized by your domain
+for API access.
+
+To view the users in a domain:
+
+  $ ./usertool.py ls_users --apps_domain altostrat.com
+
+  Users from domain altostrat.com:
+  Email                                ID                     Full Name
+  testuser1@altostrat.com              012345678936795842078  Test User1
+  testuser2@altostrat.com              012345670309715072274  Another User2
+  2 users found.
+
+To see more details about a single user:
+
+  $ ./usertool.py ls_user -u george@altostrat.com
+  Email                                    ID                     Full Name
+  george@capgsfishing.com                  012345678298938768732  George User3
+      agreedToTerms: True
+      changePasswordAtNextLogin: False
+      creationTime: u'2013-04-12T21:20:50.000Z'
+      customerId: u'Z00abcde9'
+      emails: [{u'address': u'george@altostrat.com', u'primary': True}]
+      etag: u'"-abcdEFgjhnEWHdzfvIc6-5jWT0/sI54gYrzYRf6a4Bmu8idrfO6bsM"'
+      includeInGlobalAddressList: True
+      ipWhitelisted: False
+      isAdmin: True
+      isDelegatedAdmin: False
+      isMailboxSetup: True
+      kind: u'admin#directory#user'
+      lastLoginTime: u'2014-03-04T20:15:21.000Z'
+      name: {u'familyName': u'User3',  u'fullName': u'George User3',
+             u'givenName': u'George'}
+      nonEditableAliases: []
+      orgUnitPath: u'/'
+      suspended: False
+
+To add a user:
+
+  $ ./usertool.py add_user --user_email ednalastn@altostrat.com \
+                           --first_name edna --last_name lastn \
+                           --password stubp123
+  User ednalastn@altostrat.com added.
+
+To remove a user:
+
+  $ ./usertool.py rm_user --user_email ednalastn@altostrat.com
+  User ednalastn@altostrat.com successfully removed.

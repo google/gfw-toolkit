@@ -1,0 +1,16 @@
+--------------------------------------------------------------------------------
+Examples of how to use the Google+ Domains API commands:
+--------------------------------------------------------------------------------
+
+The following is the workflow for using the peopletool command:
+
+PREWORK: (see the INSTALL instructions)
+
+Your initial command will verify you are authorized by your domain
+for API access.
+
+To view a people profile in a domain:
+
+  $ ./peopletool.py  --user_email george@altostrat.com
+  Full Name      ID                     Google+ Profile URL
+  George User3   112351558298938768732  https://plus.google.com/0123456789012
