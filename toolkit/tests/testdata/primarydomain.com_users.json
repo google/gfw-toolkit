@@ -1,0 +1,342 @@
+[
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "Michael Willis",
+      "givenName": "Michael",
+      "familyName": "Willis"
+    },
+    "nonEditableAliases": [
+      "george@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-12T21:20:50.000Z",
+    "primaryEmail": "george@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": true,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "112351558298938768732",
+    "lastLoginTime": "2013-08-16T22:01:03.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "primary": true,
+        "address": "george@primarydomain.com"
+      },
+      {
+        "address": "george@primarydomain.com.test-google-a.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest0 userlast",
+      "givenName": "usertest0",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest0@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:25:08.000Z",
+    "primaryEmail": "usertest0@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "107502325406809560189",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "primary": true,
+        "address": "usertest0@primarydomain.com"
+      },
+      {
+        "address": "usertest0@primarydomain.com.test-google-a.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest100 userlast",
+      "givenName": "usertest100",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest100@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:07.000Z",
+    "primaryEmail": "usertest100@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "107041341766612723480",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "address": "usertest100@primarydomain.com.test-google-a.com"
+      },
+      {
+        "primary": true,
+        "address": "usertest100@primarydomain.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest101 userlast",
+      "givenName": "usertest101",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest101@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:09.000Z",
+    "primaryEmail": "usertest101@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "103870367879901821212",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "address": "usertest101@primarydomain.com.test-google-a.com"
+      },
+      {
+        "primary": true,
+        "address": "usertest101@primarydomain.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest102 userlast",
+      "givenName": "usertest102",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest102@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:12.000Z",
+    "primaryEmail": "usertest102@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "111592158820531518090",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "address": "usertest102@primarydomain.com.test-google-a.com"
+      },
+      {
+        "primary": true,
+        "address": "usertest102@primarydomain.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest103 userlast",
+      "givenName": "usertest103",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest103@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:14.000Z",
+    "primaryEmail": "usertest103@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "102147113359596277326",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "primary": true,
+        "address": "usertest103@primarydomain.com"
+      },
+      {
+        "address": "usertest103@primarydomain.com.test-google-a.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest104 userlast",
+      "givenName": "usertest104",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest104@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:17.000Z",
+    "primaryEmail": "usertest104@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "118297289031886983463",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "address": "usertest104@primarydomain.com.test-google-a.com"
+      },
+      {
+        "primary": true,
+        "address": "usertest104@primarydomain.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest105 userlast",
+      "givenName": "usertest105",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest105@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:19.000Z",
+    "primaryEmail": "usertest105@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "116148014040612160001",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "primary": true,
+        "address": "usertest105@primarydomain.com"
+      },
+      {
+        "address": "usertest105@primarydomain.com.test-google-a.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest106 userlast",
+      "givenName": "usertest106",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest106@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:22.000Z",
+    "primaryEmail": "usertest106@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "117286961184087932205",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "primary": true,
+        "address": "usertest106@primarydomain.com"
+      },
+      {
+        "address": "usertest106@primarydomain.com.test-google-a.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  },
+  {
+    "agreedToTerms": true,
+    "kind": "admin#directory#user",
+    "name": {
+      "fullName": "usertest107 userlast",
+      "givenName": "usertest107",
+      "familyName": "userlast"
+    },
+    "nonEditableAliases": [
+      "usertest107@primarydomain.com.test-google-a.com"
+    ],
+    "ipWhitelisted": false,
+    "creationTime": "2013-04-30T12:30:24.000Z",
+    "primaryEmail": "usertest107@primarydomain.com",
+    "changePasswordAtNextLogin": false,
+    "isDelegatedAdmin": false,
+    "isMailboxSetup": true,
+    "isAdmin": false,
+    "includeInGlobalAddressList": true,
+    "suspended": false,
+    "id": "102159864333303951935",
+    "lastLoginTime": "1970-01-01T00:00:00.000Z",
+    "customerId": "Z01abcde9",
+    "emails": [
+      {
+        "primary": true,
+        "address": "usertest107@primarydomain.com"
+      },
+      {
+        "address": "usertest107@primarydomain.com.test-google-a.com"
+      }
+    ],
+    "orgUnitPath": "/"
+  }
+]

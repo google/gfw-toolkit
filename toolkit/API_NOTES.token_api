@@ -1,0 +1,49 @@
+--------------------------------------------------------------------------------
+Notes about requests and responses to/from the Admin SDK Token APIs:
+--------------------------------------------------------------------------------
+
+The 3 APIs of the Admin SDK Tokens API are:
+-retrieve all token credentials for a single user.
+-retrieve a user's token credential for a specific client (client id).
+-revoke a user's token credential for a specific client (client id).
+
+TOKEN:
+
+The retrieval methods both return a token record.  The following is an example
+token record authorizing twitter.com access to a user's contacts. This might
+have been returned from the request for a user's token credential for a
+specific client (twitter.com).
+
+  {u'anonymous': False,
+   u'clientId': u'twitter.com',
+   u'displayText': u'twitter.com',
+   u'etag': u'".../..."',
+   u'kind': u'admin#directory#token',
+   u'nativeApp': False,
+   u'scopes': [u'http://www.google.com/m8/feeds/'],
+   u'userKey': u'000000000000000000000'}
+
+TOKENS:
+
+The following is an example of the document returned when requesting a list
+of tokens for a single user:
+
+  {u'etag': u'"..."',
+   u'items': [{u'anonymous': False,
+               u'clientId': u'twitter.com',
+               u'displayText': u'twitter.com',
+               u'etag': u'".../..."',
+               u'kind': u'admin#directory#token',
+               u'nativeApp': False,
+               u'scopes': [u'http://www.google.com/m8/feeds/'],
+               u'userKey': u'0000000000'},
+              {u'anonymous': True,
+               u'clientId': u'Google Drive',
+               u'displayText': u'Google Drive',
+               u'etag': u'".../..."',
+               u'kind': u'admin#directory#token',
+               u'nativeApp': True,
+               u'scopes': [u'https://www.google.com/accounts/OAuthLogin',
+                           u'https://docs.google.com/feeds/'],
+               u'userKey': u'0000000000'}],
+   u'kind': u'admin#directory#tokenList'}

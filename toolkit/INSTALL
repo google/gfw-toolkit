@@ -1,0 +1,118 @@
+--------------------------------------------------------------------------------
+Introduction
+--------------------------------------------------------------------------------
+These tools use the open-source google-api-python-client-1.2 library.
+This library can be installed on your system or optionally included with the
+tools under a third_party directory.
+
+--------------------------------------------------------------------------------
+Create a Cloud Project and obtain client_secrets.json
+--------------------------------------------------------------------------------
+The first thing you need to do is create a new Cloud Project and download the
+client_secrets.json file from the Google APIs Console:
+https://console.developers.google.com/
+
+1. You should be logged in using your domain admin account. Goto the Cloud
+   Console project page: https://console.developers.google.com/project
+2. Create a new project:
+   -Click 'CREATE PROJECT' to get started.
+   -Choose a descriptive project name such as: 'Enterprise Toolkit' and
+    click 'Create'
+3. Enable the 'Admin SDK API':
+   -Click on 'APIs and auth'->'APIs'
+   -Find the 'Admin SDK' entry and change the status from 'OFF' to 'ON'.
+   -NOTE: You can turn off the other default enabled APIs as they are not
+          required:
+     -BigQuery API
+     -Google Cloud SQL
+     -Google CLoud Storage
+     -Google Cloud Storage JSON API
+4. [Optional] If you intend to look through Google+ user profile data, enable
+   the 'Google+ Domains API':
+   -Click on 'APIs and auth'->'APIs'
+   -Find the 'Google+ Domains API' entry and change the status from 'OFF'
+    to 'ON'.
+5. From the 'API & auth'->'Credentials' panel, create a 'Client ID' for a
+   'native application' or 'installed application'.
+   -Click 'CREATE NEW CLIENT ID'.
+   -Choose 'Installed Application'.
+   -Choose 'Installed Application Type' of 'Other'.
+   -Click 'Create Client ID'.
+   -Notice a new section: 'Client ID for native application'.
+6. Download the 'credentials' file for this project-client-user.
+   -Click 'Download JSON' in the 'Client ID for native application' section
+    to retrieve a 'client_secrets_xxx.json' file.
+7. Create a client_secrets.json file in your tools folder.
+   -Move the client_secret_123456789012.apps.googleusercontent.com.json
+    file into the base tools directory next to the LICENSE file.
+   -Rename the file to client_secrets.json
+
+--------------------------------------------------------------------------------
+Installing dependencies
+--------------------------------------------------------------------------------
+
+NOTE: If the download bundle contains a third_party directory, it should
+contain all the dependencies required.  Skip to 'Default apps domain'
+section below.
+
+google-api-python-client
+
+  -If needed, you can download and unpack the latest
+   google-api-python-client-1.xx.tar.gz from
+   https://code.google.com/p/google-api-python-client/downloads/list.
+
+   or
+
+  -Install it using
+   $ sudo easy_install --upgrade google-api-python-client
+
+oauth2client
+
+-If needed, copy the oauth2client folder from google-api-python-client sample
+ to a top-level third_party directory.
+
+The final folder layout should be something like this:
+
+admin_sdk_directory_api/
+cmds/
+plus_domains_api/
+third_party/
+third_party/apiclient/
+third_party/httplib2/
+third_party/oauth2client/
+plus_domains_api/
+tests/
+utils/
+HOWTO.*
+INSTALL
+LICENSE
+README
+VERSION
+client_secrets.json
+
+--------------------------------------------------------------------------------
+Caching access tokens
+--------------------------------------------------------------------------------
+All commands will cache an authentication token in a current_access.dat
+file.  The first time you run a command under cmds you will be required to
+authorize the script application to access your test domain.  Afterward, this
+access should be automatically refreshed when needed from current_access.dat.
+
+--------------------------------------------------------------------------------
+Default apps domain
+--------------------------------------------------------------------------------
+Most/all of the commands require an apps domain (-a arg).  It is recommended
+you run 'cmds/set_default_domain.py -a yourdomain.com' once to create a
+default_domain file which will be defaulted by the commands.
+
+If you intend to use these commands against multiple domains, an access token
+file for each domain will be cached under the working/ folder.
+
+--------------------------------------------------------------------------------
+Enable API access in your Google Apps Domain
+--------------------------------------------------------------------------------
+These tools require that the Google Apps domain allows API access.  This is
+enabled by a domain administrator using the Admin Control Panel at
+https://admin.google.com.
+
+The flag can be enabled from 'Security'->'API reference'->'Enable API access'.

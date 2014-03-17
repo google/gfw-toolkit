@@ -1,0 +1,48 @@
+{
+    "http://www.google.com/m8/feeds/ twitter.com": [
+        "george@primarydomain.com", "larry@primarydomain.com", "anna@primarydomain.com"],
+    "https://mail.google.com/ 651813647571.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/admin.directory.user.security 171540788957.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/admin.directory.user.security 833690960038-og2q7bpvmap57ia4eta7j3euf3b8rksn.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/apps.security 171540788957.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/apps.security 418645840638.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/apps.security 610978662317-bp0is19aoobjvj79tsva4dqb9m0tl101.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/apps.security 772480404428-c65pocsvk2ugr73cfden4qch1ml9mdol.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/apps.security 833690960038-og2q7bpvmap57ia4eta7j3euf3b8rksn.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/calendar 651813647571.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/directory.user 171540788957.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/directory.user 418645840638.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/directory.user 610978662317-bp0is19aoobjvj79tsva4dqb9m0tl101.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/directory.user 772480404428-c65pocsvk2ugr73cfden4qch1ml9mdol.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/directory.user 833690960038-og2q7bpvmap57ia4eta7j3euf3b8rksn.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/directory.user.readonly 772480404428-c65pocsvk2ugr73cfden4qch1ml9mdol.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://www.googleapis.com/auth/plus.me 888486287722-4ajk7ild0iket78tngk2igivh7hb515i.apps.googleusercontent.com": [
+        "george@primarydomain.com"],
+    "https://mail.google.com/mail/feed/atom/ madeuptest1.com": ["madeuptestuser1@primarydomain.com"],
+    "https://www.googleapis.com/auth/apps.security.custom madeuptest2.com": ["madeuptestuser2@primarydomain.com"],
+    "https://mail.google.com/mail/feed/atom/ admin.mailchimp.com": [
+        "anna@primarydomain.com", "larry@primarydomain.com", "george@primarydomain.com"],
+    "https://www.google.com/m8/feeds/ admin.mailchimp.com": [
+        "anna@primarydomain.com", "larry@primarydomain.com", "george@primarydomain.com"],
+    "https://docs.google.com/feeds/ admin.mailchimp.com": [
+        "anna@primarydomain.com", "larry@primarydomain.com", "george@primarydomain.com"],
+    "https://www.google.com/analytics/feeds/ admin.mailchimp.com": [
+        "anna@primarydomain.com", "larry@primarydomain.com", "george@primarydomain.com"],
+    "https://spreadsheets.google.com/feeds/ admin.mailchimp.com": [
+        "anna@primarydomain.com", "larry@primarydomain.com", "george@primarydomain.com"]
+}

@@ -1,0 +1,118 @@
+--------------------------------------------------------------------------------
+Examples of how to use the Admin SDK Token API commands:
+[See the PREWORK section of HOWTO.users_api for setup details.]
+--------------------------------------------------------------------------------
+1. To get a list of possible tokens to revoke for a user in the Apps Domain
+   altostrat.com:
+
+  $ ./cmds/ls_tokens_for_user.py -u john.smith@altostrat.com
+
+  Client ID                                Display Text
+  Android                                  Android
+  Google Chrome                            Google Chrome
+  Google Play Movies                       Google Play Movies
+  www.tripit.com                           www.tripit.com
+
+2. For a detailed (long) listing of the API accesses (scopes) that have been
+   granted for a user to an application or website:
+
+  $ ./cmds/ls_tokens_for_user.py -u john.smith@altostrat.com -l
+
+  Client ID                                Display Text
+  Android                                  Android
+      https://www.googleapis.com/auth/calendar.readonly
+      https://www.googleapis.com/auth/contacts.readonly
+      https://www.googleapis.com/auth/emeraldsea.stream.read
+      https://www.googleapis.com/auth/latitude
+      https://www.googleapis.com/auth/paths.notifications
+  Google Chrome                            Google Chrome
+      https://www.google.com/accounts/OAuthLogin
+  Google Play Movies                       Google Play Movies
+      https://www.googleapis.com/auth/android_video
+      https://www.googleapis.com/auth/youtube
+  www.tripit.com                           www.tripit.com
+      http://www.google.com/calendar/feeds/
+      http://www.google.com/m8/feeds/
+      https://mail.google.com/
+
+3. To view a summary of the tokens to a client_id in a console report:
+
+  $ ./cmds/gather_domain_token_stats.py -a altostrat.com --first_n=30
+  $ ./cmds/report_domain_token_status.py
+
+4. To enhance the summary with detail:
+
+  $ ./cmds/report_domain_token_status.py -l
+
+5. To enhance the summary with users who granted the tokens:
+
+  $ ./cmds/report_domain_token_status.py -l --show_users
+
+6. To revoke TripIt access to Google Apps Data for user
+   john.smith@altastrat.com:
+
+  $ ./cmds/revoke_tokens_for_user_clientid.py -u john.smith@altostrat.com \
+                                              -i www.tripit.com
+
+7. To efficiently revoke TripIt access to domain users who are reported
+   to have authorized tokens:
+
+  $ ./cmds/gather_domain_token_stats.py -a altostrat.com
+  $ ./cmds/revoke_tokens_for_domain_clientid.py -a altostrat.com \
+                                                -i www.tripit.com \
+                                                --use_local_token_stats
+
+8. To revoke tokens of TripIt access to Google Apps Data for the first 10
+   users in domain altostrat.com (as an experiment):
+
+  $ ./cmds/revoke_tokens_for_domain_clientid.py -a altostrat.com \
+                                                -i www.tripit.com \
+                                                --first_n=10
+
+9. To revoke TripIt access to Google Apps Data for all users in domain
+   altostrat.com:
+
+  $ ./cmds/revoke_tokens_for_domain_clientid.py -a altostrat.com \
+                                                -i www.tripit.com
+
+10. If the domain-wide revocation exercise is interrupted, you may try to
+    resume it with --resume:
+
+  $ ./cmds/revoke_tokens_for_domain_clientid.py -a altostrat.com \
+                                                -i www.tripit.com \
+                                                --resume
+
+11. To run a single script (e.g. nightly) that collects a fresh user list,
+    collects the latest token statistics and then revokes unapproved tokens
+    as identified by a client black list and a scope black list:
+
+  First, create a client black list file in the working/<apps domain> folder of
+  your installation.  The client black list includes each offending client id
+  on a single line.  Tokens that are discovered to have been issued to any of
+  these domains are considered 'unapproved' and will be revoked when
+  cmds/revoke_unapproved_tokens.py is run with the --client_black_list_file
+  option.  If you have trouble identifying client id's that are currently in
+  use, run cmds/report_domain_token_status.py to see the top most used
+  token clients in your apps domain.
+
+  For example, the file might look like this:
+
+  problemdomain.com
+  610978661234.apps.googleusercontent.com
+  www.anotherproblemdomain.com
+
+  Second, create a scope black list file in the working/<apps domain> folder of
+  your installation.  The scope black list includes each scopes of data that
+  users of your domain have granted access to client applications.  Any tokens
+  found to have allowed access to these scopes are considered 'unapproved'
+  and will be revoked when cmds/revoke_unapproved_tokens.py is run with the
+  --scope_black_list_file option.
+
+  $ ./cmds/revoke_unapproved_tokens.py -a altostrat.com --force \
+      --client_black_list_file=client_black_list.txt \
+      --scope_black_list_file=scope_black_list.txt
+
+  All revocation operations performed by cmds/revoke_unapproved_tokens.py will
+  be logged in a file named 'cse_api_tool.log' which will be located in your
+  systems temporary file folder.  This file location will be printed at the
+  end of running cmds/revoke_unapproved_tokens.py.

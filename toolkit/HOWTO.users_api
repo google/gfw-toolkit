@@ -1,0 +1,147 @@
+--------------------------------------------------------------------------------
+Examples of how to use the Admin SDK Users API commands:
+--------------------------------------------------------------------------------
+
+The following is the workflow for using each of the Admin SDK cmd tools:
+
+PREWORK: (see the INSTALL instructions)
+
+Your initial command will verify you are authorized by your domain
+for API access.  For example, to establish a 'default' domain for
+commands:
+
+  $ ./cmds/set_default_domain.py --apps_domain="altostrat.com"
+
+When you do this, you will be required to authorize the application tool
+access to your domain.  If you are not logged into the domain on the
+same machine you can use the --noauth_local_webserver option to authorize.
+
+After this, the current_access.dat file will have been created under the
+working/<domain> directory to track your authorization token.
+
+  $ ./cmds/ls_customer_id.py
+  CustomerId for altostrat.com:
+  A03abcde4
+
+All Google Apps domains are owned by a customer_id.
+
+  $ ./cmds/ls_users.py
+  Users from domain altostrat.com:
+  ID                     Email                       Full Name
+  107502325406809560189  testuser0@altostrat.com     testuser0 userlast
+  107041341766612723480  testuser100@altostrat.com   testuser100 userlast
+  103870367879901821212  testuser101@altostrat.com   testuser101 userlast
+  3 users found.
+
+  $ ./cmds/ls_user.py --user_email=george@altostrat.com
+  ID                     Email                         Full Name
+  002351558298938768123  george@altostrat.com          George Enlighten
+
+Some commands allow -l for a long listing.
+
+  $ ./cmds/ls_user.py --user_email=george@altostrat.com -l
+  ID                     Email                         Full Name
+  002351558298938768123  george@altostrat.com          George Enlighten
+      agreedToTerms: True
+      changePasswordAtNextLogin: False
+      creationTime: 2013-04-12T21:20:50.000Z
+      customerId: A03abcde4
+      emails: [{u'primary': True, u'address': u'george@altostrat.com'}]
+      includeInGlobalAddressList: True
+      ipWhitelisted: False
+      isAdmin: True
+      isDelegatedAdmin: False
+      isMailboxSetup: True
+      kind: directory#user
+      lastLoginTime: 2013-05-10T15:50:41.000Z
+      name: {u'fullName': u'George Enlighten', u'givenName': u'George',
+             u'familyName': u'Enlighten'}
+      nonEditableAliases: []
+      orgUnitPath: /
+      suspended: False
+
+All commands allow -v which shows the actual urls requested.
+
+  $ ./cmds/ls_user.py --user_email=larry@altostrat.com -l -v
+  Showing VERBOSE output.
+  DEBUG    user-agent: admin-api-tool/1.20130918
+  INFO     URL being requested: https://www.googleapis.com/discovery/v1/apis/adm
+in/directory_v1/rest
+  DEBUG    GetDomainUser (larry@altostrat.com).
+  INFO     URL being requested: https://www.googleapis.com/admin/directory/v1/us
+ers/larry@altostrat.com?alt=json
+  ID                     Email                                    Full Name
+  001251558298938768123  larry@altostrat.com                      Larry Summon
+      agreedToTerms: True
+      changePasswordAtNextLogin: False
+      creationTime: u'2013-04-12T21:20:50.000Z'
+      customerId: u'A03abcde4'
+      emails: [{u'address': u'larry@altostrat.com', u'primary': True}]
+      etag: u'"0bYJO6Rgaza_ldtP7NvHUkQ7ad8/98FkpHvizyO8Fdy3_ajDymuiQTZ"'
+      includeInGlobalAddressList: True
+      ipWhitelisted: False
+      isAdmin: True
+      isDelegatedAdmin: False
+      isMailboxSetup: True
+      kind: u'admin#directory#user'
+      lastLoginTime: u'2013-09-18T15:39:42.000Z'
+      name: {u'familyName': u'Summon',  u'fullName': u'Larry Summon',
+             u'givenName': u'Lawrence'}
+      nonEditableAliases: []
+      orgUnitPath: u'/'
+      suspended: False
+
+Now try a simple add and delete of users.
+
+  $ ./cmds/add_user.py --first_name="Larry" --last_name="Summon" \
+               --password="Googleapps123" --user_email="larry@altostrat.com"
+  User larry@altostrat.com added.
+
+  $ ./cmds/ls_user.py -u larry@altostrat.com
+  ID                     Email                          Full Name
+  105274467782838919389  larry@altostrat.com            Larry Summon
+
+  $ ./cmds/rm_user.py --user_email=larry@altostrat.com --force
+  User larry@altostrat.com deleted.
+
+  $ ./cmds/ls_user.py -u larry@altostrat.com
+  User larry@altostrat.com not found.
+
+Create a general user report with details of user, OU and if suspended.
+
+  $ ./cmds/report_users.py  -a altostrat.com --csv_fields="primaryEmail,orgUnitPath,
+suspended"
+  Wrote user report: /.../working/altostrat.com/report_users.csv.
+
+  Example csv report data:
+  orgUnitPath,primaryEmail,suspended
+  /,admin@altostrat.com,False
+  /,Administrator@altostrat.com,False
+
+Create report of user counts by OU.
+
+  $ ./cmds/report_org_counts.py -a altostrat.com --csv
+
+  Generating new counts...
+  Wrote ../runfiles/user_orgs.csv
+  Wrote user report: /.../working/altostrat.com/_report_users_orgs.csv.tmp.
+  ------------------------------------------------------------------------------
+  active,suspended,OU
+  449,1,/Data Migration Users
+  441,3,/
+  17,0,/Board of Directors
+  3,0,/No services
+  1,0,/Mobile Testing
+  ------------------------------------------------------------------------------
+  OU,active,suspended
+  /,441,3
+  /Board of Directors,17,0
+  /Data Migration Users,449,1
+  /Mobile Testing,1,0
+  /No services,3,0
+  ------------------------------------------------------------------------------
+  Writing counts to files.
+  Wrote report of org users sorted by active user count:
+  /.../working/altostrat.com/orgs_by_active.csv.
+  Wrote report of org users sorted by org-unt count:
+  /.../working/altostrat.com/orgs_by_ou.csv.
