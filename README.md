@@ -53,13 +53,13 @@ The Admin SDK requires the user to be a domain Admin.
 
 ## Commands
 
-Initially - run once
+### Initially - run once
 
  Command               | Description
 :----------------------|:------------------------------------------------------
  set_default_domain.py | Save default domain for subsequent commands.
 
-Simple Domain/User Interrogation
+### Simple Domain/User Interrogation
 
  Command          | Description
 :-----------------|:-----------------------------------------------------------
@@ -67,14 +67,14 @@ ls_customer_id.py | Show unique Google customer id.
 ls_user.py        | Show details about one user.  Allows a -p option to show Google+ profile details about one user.
 ls_users.py       | Show simple or detailed list about domain users.
 
-Modify Users
+### Modify Users
 
  Command          | Description
 :-----------------|:-----------------------------------------------------------
 add_user.py       | Add/modify domain user.
 rm_user.py        | Remove domain user.
 
-User Reporting
+### User Reporting
 
  Command                     | Description
 :----------------------------|:------------------------------------------------
@@ -82,31 +82,35 @@ report_users.py              | Summarize domain users and metadata.
 report_plus_domains_users.py | Use the Plus API to enumerate users.
 report_org_counts.py         | Count domain users in orgs.
 
-Simple Token Interrogation
+### Simple Token Interrogation
 
  Command                       | Description
 :------------------------------|:----------------------------------------------
 ls_tokens_for_user.py          | Show tokens granted by one user.
 ls_tokens_for_user_clientid.py | Show if tokens granted by one user to one domain.
 
-Domain Wide Token Interrogation
+### Domain Wide Token Interrogation
 
  Command                       | Description
 :------------------------------|:----------------------------------------------
 gather_domain_token_stats.py   | Gather a local cache of token status for an entire domain.
 report_domain_token_status.py  | Show a summary of the domain token information.
 
-Simple Token Revocation
+### Simple Token Revocation
 
  Command                           | Description
 :----------------------------------|:------------------------------------------
 revoke_tokens_for_user_clientid.py | Revoke any tokens one user has authorized to one third party.
 
 
-Domain Wide Token Revocation
+### Domain Wide Token Revocation
 
  Command                             | Description
 :------------------------------------|:----------------------------------------
 revoke_tokens_for_domain_clientid.py | Revoke any tokens any user has authorized to one third party.
 revoke_unapproved_tokens.py          | Automated, logging command to revoke domain tokens using a black list.
 
+## Support
+
+For questions and answers join/view the
+[enterprise-toolkit Google Group](https://groups.google.com/forum/#!forum/opensource-enterprise-toolkit).
