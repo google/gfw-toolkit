@@ -6,17 +6,17 @@ This is an example solution demonstrating the user parts of the
 Admin SDK API and Google+ Domains API.
 
 The solution includes Python code examples of:
--authenticating using OAuth2
--using Google's discoverable APIs (https://developers.google.com/discovery/)
--parsing results from API calls
--handling errors from API calls
--retrying API calls due to per-second quota responses
+* authenticating using OAuth2
+* using Google's discoverable APIs (https://developers.google.com/discovery/)
+* parsing results from API calls
+* handling errors from API calls
+* retrying API calls due to per-second quota responses
 
 The solution is divided between 4 main directories:
--admin_sdk_directory_api: code to wrap admin_sdk api supported.
--cmds: command line wrappers that invoke the api wrappers for easy use/testing.
--plus_domains_api: code to wrap plus_domains api supported.
--utils: helper code that is used commonly used across cmds.
+* admin_sdk_directory_api: code to wrap admin_sdk api supported.
+* cmds: command line wrappers that invoke the api wrappers for easy use/testing.
+* plus_domains_api: code to wrap plus_domains api supported.
+* utils: helper code that is used commonly used across cmds.
 
 ## Objectives
 

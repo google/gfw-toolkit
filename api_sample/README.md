@@ -6,10 +6,10 @@ This is a simple example solution demonstrating the user parts of the
 Admin SDK API and Google+ Domains API.
 
 The solution includes Python code examples of:
--authenticating using OAuth2
--using Google's discoverable APIs (https://developers.google.com/discovery/)
--parsing results from API calls
--handling errors from API calls
+* authenticating using OAuth2
+* using Google's discoverable APIs (https://developers.google.com/discovery/)
+* parsing results from API calls
+* handling errors from API calls
 
 ## Authentication
 
