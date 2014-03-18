@@ -30,6 +30,23 @@ Each set of scripts has an INSTALL document with helpful instructions for
 installing the scripts.  In addition, each set of scripts includes HOWTO
 documents to demonstrate a few of the commands provided.
 
+## Commands
+
+### Simple Domain/User Interrogation
+
+ Command             | Description
+:--------------------|:--------------------------------------------------------
+usertool.py ls_user  | Show details about one user.
+usertool.py ls_users | Show simple list of domain users.
+usertool.py add_user | Add domain user.
+usertool.py rm_user  | Remove domain user.
+
+### Simple Domain Google+ User-Profile Interrogation
+
+ Command             | Description
+:--------------------|:--------------------------------------------------------
+peopletool.py        | Show details about one user profile.
+
 ## Support
 
 For questions and answers join/view the
