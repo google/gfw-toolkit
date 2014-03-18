@@ -28,7 +28,7 @@ The Admin SDK requires the user to be a domain Admin.
 
 Each set of scripts has an INSTALL document with helpful instructions for
 installing the scripts.  In addition, each set of scripts includes HOWTO
-documents to demonstrated a few of the commands provided.
+documents to demonstrate a few of the commands provided.
 
 ## Support
 

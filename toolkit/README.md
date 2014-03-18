@@ -41,6 +41,12 @@ persist this token in a local file and re-use it.  The google-api-python-client 
 
 The Admin SDK requires the user to be a domain Admin.
 
+## Getting Started
+
+Each set of scripts has an INSTALL document with helpful instructions for
+installing the scripts.  In addition, each set of scripts includes HOWTO
+documents to demonstrate a few of the commands provided.
+
 ## Commands
 
 ### Initially - run once
