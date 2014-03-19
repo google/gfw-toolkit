@@ -84,11 +84,5 @@ def ParseHttpResult(url, response, content):
         message == 'Domain cannot use apis.'):
       error_text = [message, 'You should check "Enable provisioning API" '
                     'in your Domain Settings->User Settings.']
-    # When requesting tokens for a specific client_id, if no tokens
-    # are found, the API server responds with an unexpected 500 error.
-    # Notice that specific case and fail a little more gracefully.
-    elif (response.status == 500 and
-          message == 'No tokens exist for the specified client id'):
-      error_text = [message]
     return '\n'.join(error_text)
   return content
