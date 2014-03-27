@@ -6,7 +6,8 @@ The Enterprise Toolkit is a set of command-line scripts that make use of the
 Google Apps Admin SDK API: https://developers.google.com/admin-sdk/. The
 scripts are a good way to get introduced and experiment with the API.
 They allow easy chaining of commands via simple shell scripts or more
-interesting Python modules.
+interesting Python modules. Feel free to share our
+[GitHub web page](http://google.github.io/enterprise-toolkit/).
 
 ## Background
 
