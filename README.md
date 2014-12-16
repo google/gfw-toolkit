@@ -1,17 +1,17 @@
-# enterprise-toolkit
+# gfw-toolkit
 
 ## Introduction
 
-The Enterprise Toolkit is a set of command-line scripts that make use of the
+The Google for Work Toolkit is a set of command-line scripts that make use of the
 Google Apps Admin SDK API: https://developers.google.com/admin-sdk/. The
 scripts are a good way to get introduced and experiment with the API.
 They allow easy chaining of commands via simple shell scripts or more
 interesting Python modules. Feel free to share our
-[GitHub web page](http://google.github.io/enterprise-toolkit/).
+[GitHub web page](http://google.github.io/gfw-toolkit/).
 
 ## Background
 
-It is not uncommon for large enterprise customers to request the ability
+It is not uncommon for large Google for Work customers to request the ability
 to generate reports and perform actions on a domain-wide basis. The Google
 Admin SDK offers many useful functions but many desirable domain-wide
 operations remain to be written.
@@ -21,12 +21,12 @@ requires visits to a few different websites to determine all the necessary
 details. These scripts are a useful start in learning how to access the
 Admin SDK API for nontrivial, domain-wide operations.
 
-Finally, many enterprise domains seek the ability to document and revoke the
+Finally, many Google for Work domains seek the ability to document and revoke the
 3LO tokens that have been granted to third parties by domain users.  In many
 cases allowing access to domain resources is a concern to domain
 administrators.
 
-Two sets of scripts are provided by the enterprise-toolkit:
+Two sets of scripts are provided by the gfw-toolkit:
 
 * api_sample: a set of user scripts for beginners.
  * Shows OAuth2 authentication.
@@ -50,4 +50,4 @@ documents to demonstrate a few of the commands provided.
 ## Support
 
 For questions and answers join/view the
-[enterprise-toolkit Google Group](https://groups.google.com/forum/#!forum/opensource-enterprise-toolkit).
+[gfw-toolkit Google Group](https://groups.google.com/forum/#!forum/opensource-gfw-toolkit).
