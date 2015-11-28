@@ -19,29 +19,28 @@ https://console.developers.google.com/
    -Choose a descriptive project name such as: 'Enterprise Toolkit' and
     click 'Create'
 3. Enable the 'Admin SDK API':
-   -Click on 'APIs and auth'->'APIs'
-   -Find the 'Admin SDK' entry and change the status from 'OFF' to 'ON'.
-   -NOTE: You can turn off the other default enabled APIs as they are not
-          required:
-     -BigQuery API
-     -Google Cloud SQL
-     -Google CLoud Storage
-     -Google Cloud Storage JSON API
+   -Click on 'Use Google APIs'
+   -(Notice some APIs are enabled by default).
+   -Type 'Admin SDK' in the search box.
+   -Click the 'Admin SDK' link.
+   -Click 'Enable API'.
 4. [Optional] If you intend to look through Google+ user profile data, enable
    the 'Google+ Domains API':
-   -Click on 'APIs and auth'->'APIs'
-   -Find the 'Google+ Domains API' entry and change the status from 'OFF'
-    to 'ON'.
-5. From the 'API & auth'->'Credentials' panel, create a 'Client ID' for a
+   -Type 'Google+ Domains API' in the search box.
+   -Click the 'Google+ Domains API' link.
+   -Click 'Enable API'.
+5. From the 'API Manager' create a 'Client ID' for a
    'native application' or 'installed application'.
-   -Click 'CREATE NEW CLIENT ID'.
-   -Choose 'Installed Application'.
-   -Choose 'Installed Application Type' of 'Other'.
-   -Click 'Create Client ID'.
-   -Notice a new section: 'Client ID for native application'.
+   -Click 'Credentials'.
+   -Click 'OAuth consent screen'.
+    -Type 'Enterprise Toolkit'.
+    -Click 'Save'.
+   -Click 'Other'.
+   -Type a name.
+   -Click 'Create'.
+   -Notice a new OAuth2 client ID.
 6. Download the 'credentials' file for this project-client-user.
-   -Click 'Download JSON' in the 'Client ID for native application' section
-    to retrieve a 'client_secrets_xxx.json' file.
+   -Click 'Download JSON' arrow to retrieve a 'client_secrets_xxx.json' file.
 7. Create a client_secrets.json file in your tools folder.
    -Move the client_secret_123456789012.apps.googleusercontent.com.json
     file into the base tools directory next to the LICENSE file.
