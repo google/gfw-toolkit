@@ -1,53 +1,20 @@
 # gfw-toolkit
 
-## Introduction
+## Deprecation Notice
 
-The Google for Work Toolkit is a set of command-line scripts that make use of the
-Google Apps Admin SDK API: https://developers.google.com/admin-sdk/. The
-scripts are a good way to get introduced and experiment with the API.
-They allow easy chaining of commands via simple shell scripts or more
-interesting Python modules. Feel free to share our
-[GitHub web page](http://google.github.io/gfw-toolkit/).
+Users of gfw-toolkit,
 
-## Background
+The team at Google responsible for gfw-toolkit want to provide you with a 30 day notice that the repository [google/gfw-toolkit](https://github.com/google/gfw-toolkit) will be deprecated on 11/14/16.
 
-It is not uncommon for large Google for Work customers to request the ability
-to generate reports and perform actions on a domain-wide basis. The Google
-Admin SDK offers many useful functions but many desirable domain-wide
-operations remain to be written.
+### What does this mean?
+The github project will be deprecated and Google will discontinue support for gfw-toolkit.
 
-The procedures for using the Admin SDK API include many steps and usually
-requires visits to a few different websites to determine all the necessary
-details. These scripts are a useful start in learning how to access the
-Admin SDK API for nontrivial, domain-wide operations.
+### Why are you doing this?
+The reason Google first created these tools was to address a need when there were limited alternatives in the market. Today there are options available that are better supported and in many cases provide an improved experience.
 
-Finally, many Google for Work domains seek the ability to document and revoke the
-3LO tokens that have been granted to third parties by domain users.  In many
-cases allowing access to domain resources is a concern to domain
-administrators.
+### What are the alternative options?
+We recommend switching to use [Google Apps Manager](https://github.com/jay0lee/GAM) as the functionality provided by gfw-toolkit is well supported by Google Apps Manager and can offer an improved benefit over it.
 
-Two sets of scripts are provided by the gfw-toolkit:
+Here's an [example on key management with GAM](https://github.com/jay0lee/GAM/wiki/SecurityExamples#oauth-tokens)
 
-* api_sample: a set of user scripts for beginners.
- * Shows OAuth2 authentication.
- * Shows use of Admin SDK Directory Users API and Google+ Domains API.
- * Shows parsing of results from API calls.
- * Shows handling errors in API calls.
- * Shows a simple implementation of argparse subcommands.
-* toolkit: a set of user and token scripts for more advanced users.
- * Shows everything in api_sample (except subcommand parsing).
- * Adds generic domain-wide user reporting scripts.
- * Adds scripts to show 3LO token status and revoke tokens.
- * Shows demonstrations of resuming of interrupted long-running scripts.
- * Adds a generic approach to retrying API calls.
-
-## Getting Started
-
-Each set of scripts has an INSTALL document with helpful instructions for
-installing the scripts.  In addition, each set of scripts includes HOWTO
-documents to demonstrate a few of the commands provided.
-
-## Support
-
-For questions and answers join/view the
-[gfw-toolkit Google Group](https://groups.google.com/forum/#!forum/opensource-gfw-toolkit).
+We thank you for your support and use of the tool, we hope it was useful! 
